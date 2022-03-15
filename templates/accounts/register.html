@@ -3,30 +3,61 @@
 {% block content %}
     <div class="container-one">
         <h1>Register</h1>
-        <form>
+        <form action="{% url 'register' %}" method="POST">
+            {% csrf_token %}
+
+
             <div class="form-control">
-                <input type="text" required>
+                {{ form.first_name }}
+                <label>First Name</label>
+            </div>
+            <div class="form-control">
+                {{ form.last_name }}
+                <label>Last Name</label>
+            </div>
+            <div class="form-control">
+                {{form.phone_number}}
+                <label>phone Number</label>
+            </div>
+
+            <div class="form-control">
+                {{ form.email }}
                 <label>Email</label>
             </div>
 
             <div class="form-control">
-                <input type="password" required>
+                {{form.password}}
                 <label>Password</label>
             </div>
 
             <div class="form-control">
-                <input type="password" required>
+                {{form.confirm_password}}
                 <label>Confirm Password</label>
             </div>
 
 
-            <button class="btn">Register</button>
+            <input type="submit" id="go" value="Register" class="btn" />
 
             <p class="text">Already have an account? <a href="{% url 'login' %}">Login</a></p>
 
+
+            {{ form.email.errors }}  
+            {{form.non_field_errors}} 
         </form>
     </div>
-    <script src="{% static 'js/form.js' %}"></script>    
 {% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
