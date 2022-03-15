@@ -19,7 +19,8 @@
         <div class="container">
             <div class="row">
                 {% for post in posts %}
-                <div class="card" style="width: 18rem;">
+                <div class="col-md-4">
+                <div class="card mt-3">
                     <img src="{{post.image.url}}" class="card-img-top"
                         alt="...">
                     <div class="card-body">
@@ -30,39 +31,9 @@
                         <a href="#" class="card-link">Another link</a>
                     </div>
                 </div>
-                {% endfor %}
-
             </div>
-
-
-
-
-<!-- 
-
-
-
-            {% if post %}
-            <img src="{{ post.image.url}}" alt="connect" style="max-height:300px">
-            <h3>title: {{post.title}}</h3>
-
-          {% endif %} -->
-          
-
-
-
-
-
-
-                    
-
-
-
-
-
-
-
-
-            
+                {% endfor %}
+            </div>
         </div>
 
 

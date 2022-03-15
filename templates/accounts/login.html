@@ -3,7 +3,8 @@
 {% block content %}
     <div class="container-one">
         <h1>Please Login</h1>
-        <form>
+        <form action="{% url 'login' %}" method="POST">
+            {% csrf_token %}
             <div class="form-control">
                 <input type="text" required>
                 <label>Email</label>
@@ -22,4 +23,52 @@
     </div>
     <script src="{% static 'js/form.js' %}"></script>    
 {% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <input type="email" class="form-control" placeholder="input email" name="email">
+                <br>
+                <input type="password" class="form-control" placeholder="input password" name="password">
+<br>
+                <input type="submit" id="go" value="Log In" class="btn" />
+           </form>
+    </div>
+  </div>
+  <div class="sub-content">
+    <div class="s-part">
+        <a href="{% url 'forgotpassword' %}">Forgot password?</a> <br>
+      Don't have an account?<a href="{% url 'register' %}"> Sign up</a>
+    </div>
+  </div>
+  {% endif %}
+
+
+
+
+
+
 

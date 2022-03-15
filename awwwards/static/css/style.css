@@ -65,6 +65,8 @@ body {
   font-weight: bold;
 }
 
+
+
 .hero {
   background-image: url('https://assets.awwwards.com/assets/images/pages/awards-2020/social/home.jpg?v=1');
   background-repeat: no-repeat;
@@ -80,7 +82,7 @@ body {
   margin-bottom: 20px;
   z-index: -2;
 }
-
+                
 .hero::before {
   content: '';
   position: absolute;
@@ -126,7 +128,6 @@ body {
   height: 50px;
   width: 450px;
   transition: width 0.3s ease;
-  border-radius: 20%;
 }
 
 
