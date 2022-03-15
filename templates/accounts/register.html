@@ -1,0 +1,32 @@
+{% extends 'base2.html' %}
+{% load static %}
+{% block content %}
+    <div class="container-one">
+        <h1>Register</h1>
+        <form>
+            <div class="form-control">
+                <input type="text" required>
+                <label>Email</label>
+            </div>
+
+            <div class="form-control">
+                <input type="password" required>
+                <label>Password</label>
+            </div>
+
+            <div class="form-control">
+                <input type="password" required>
+                <label>Confirm Password</label>
+            </div>
+
+
+            <button class="btn">Register</button>
+
+            <p class="text">Already have an account? <a href="{% url 'login' %}">Login</a></p>
+
+        </form>
+    </div>
+    <script src="{% static 'js/form.js' %}"></script>    
+{% endblock %}
+
+

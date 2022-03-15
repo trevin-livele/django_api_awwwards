@@ -1,24 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-    <nav class="nav">
-        <div class="container-site">
-            <h1 class="logo"><a href="./index.html">AWWWARDS.</a></h1>
+{% include 'includes/navbar.html' %}
 
-           <form action="">
-            <div class="search">
-                <input type="text" class="input" placeholder="search....">
-            </div>
-           </form>
-
-            
-            <ul>
-                <li><a href="./login.html" class="currents">Login</a></li>
-                <li><a href="./register.html">Register</a></li>
-                <li><a href="#">SUBMIT YOUR SITE</a></li>
-            </ul>
-        </div>
-    </nav>
     <div class="hero">
         <div class="container-site">
             <h1>Welcome To My AWWWARDS Website</h1>
