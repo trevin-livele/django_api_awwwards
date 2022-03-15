@@ -34,7 +34,7 @@
             
             
             
-            <form action="" method="POST">
+            <form action="{% url 'submit_review' post.id %}" method="POST">
                 {% csrf_token %}
                 <h5> write your review</h5>
 <!-- rating stars -->
