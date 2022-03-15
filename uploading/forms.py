@@ -1,5 +1,5 @@
 from django import forms
-from .models import Post
+from .models import Post,ReviewRating
 
 class ImageForm(forms.ModelForm):
     """Form for the image model"""
@@ -8,3 +8,7 @@ class ImageForm(forms.ModelForm):
         fields = ('title', 'image','description','post_link')
 
 
+class ReviewForm(forms.ModelForm):
+    class Meta:
+        model = ReviewRating
+        fields = ['subject','review','rating']
