@@ -17,7 +17,7 @@ users can view projects uploaded by other users in the home page of app and rate
 
 ### Clone the Repo
 Run the following command on the terminal:
-`git clone git@github.com:trevin-livele/django_api_awwwards.git && cd Instagram`
+`git clone git@github.com:trevin-livele/django_api_awwwards.git && cd Awwards`
 
 
 ### Activate virtual environment
