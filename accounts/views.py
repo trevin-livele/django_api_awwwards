@@ -57,10 +57,11 @@ def login_user(request):
             return redirect('login')
     return render(request, 'accounts/login.html')
 
+
+
 @login_required(login_url = 'login')
 def logout(request):
-    logout(request)
-    messages.success(request, 'You are logged out.')
+    # logout(request)
     return redirect('login')
 
 
