@@ -1,5 +1,7 @@
 <nav class="nav">
     <div class="container-site">
+        {% if user.id is  None %}
+
         <h1 class="logo"><a href="./index.html">AWWWARDS.</a></h1>
 
        <form action="">
@@ -7,12 +9,15 @@
             <input type="text" class="input" placeholder="search....">
         </div>
        </form>
-
-        
         <ul>
             <li><a href="{% url 'login' %}" class="currents">Login</a></li>
             <li><a href="{% url 'register' %}">Register</a></li>
+            {% else %}
             <li><a href="{% url 'createpost' %}">SUBMIT YOUR SITE</a></li>
+            <li><a href="{% url 'logout' %}">Logout</a></li>
+
         </ul>
+        {% endif %}
+
     </div>
 </nav>
