@@ -5,4 +5,6 @@ class ImageForm(forms.ModelForm):
     """Form for the image model"""
     class Meta:
         model = Post
-        fields = ('title', 'image')
+        fields = ('title', 'image','description','post_link')
+
+

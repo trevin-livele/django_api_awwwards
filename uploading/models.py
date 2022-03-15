@@ -12,6 +12,7 @@ class Post(models.Model):
     description = models.CharField(max_length=200)
     date_posted  =  models.DateTimeField(auto_now_add=True)
     date_updated = models.DateTimeField(auto_now=True)
+    post_link = models.CharField(max_length=20, unique=True,null=True)
 
 
     def __str__(self):
