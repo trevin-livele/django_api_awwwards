@@ -3,5 +3,6 @@ from  .import views
 
 
 urlpatterns = [
+    path('createpost/', views.createpost, name='createpost'),
 
 ]
