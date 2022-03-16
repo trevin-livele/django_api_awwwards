@@ -26,12 +26,16 @@ def register(request):
             user.is_active = True
             user.save()
 
+            # Create a user profile
+            profile = UserProfile()
+            profile.user_id = user.id
+            profile.profile_picture = 'default/default-user.jpg'
+            profile.save()
 
 
 
-            # login(request, user)
-            #USER ACTIVATION
-            # send_email.send()
+
+            
             return redirect('login')
     else:
         form = RegistrationForm()
