@@ -40,3 +40,18 @@ def submit_review(request, post_id):
                 data.save()
                 # messages.success(request, 'Thank you! Your review has been submitted.')
                 return redirect(url)
+
+
+def singleview(request):
+    posts = Post.objects.all()
+    title = Post.objects.all()
+    description = Post.objects.all()
+    post_link = Post.objects.all()
+    context = {
+        'posts'         : posts,
+        'title'         : title,
+        'description'  : description,
+        'post_link'     :  post_link,
+
+    }
+    return render(request, 'single_view.html', context)

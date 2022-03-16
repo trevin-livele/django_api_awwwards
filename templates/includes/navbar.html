@@ -13,7 +13,8 @@
             <li><a href="{% url 'register' %}">Register</a></li>
             {% else %}
             <li><a href="{% url 'createpost' %}">SUBMIT YOUR SITE</a></li>
-            <a href="{% url 'edit_profile' %}">Welcome {{user.username}}</a>
+            <a href="{% url 'edit_profile' %}"> {{user.username}}</a>
+            <a href="{% url 'singleview' %}">Projects</a>
             <li><a href="{% url 'logout' %}">Logout</a></li>
 
         </ul>
