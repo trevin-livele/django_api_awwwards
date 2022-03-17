@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'accounts',
     'uploading',
+    'rest_api',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
