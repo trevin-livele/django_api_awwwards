@@ -1,7 +1,7 @@
 <nav class="nav">
     <div class="container-site">
 
-        <h1 class="logo"><a href="{% url 'home' %}">AWWWARDS.</a></h1>
+        <h1 class="logo"><a href="{% url 'home' %}">Awwwards.</a></h1>
        <form action="">
         <div class="search">
             <input type="text" class="input" placeholder="search....">
@@ -13,7 +13,7 @@
             <li><a href="{% url 'register' %}">Register</a></li>
             {% else %}
             <li><a href="{% url 'createpost' %}">SUBMIT YOUR SITE</a></li>
-            <a href="{% url 'edit_profile' %}"> {{user.username}}</a>
+            <a href="{% url 'edit_profile' %}">welcome {{user.username}}</a>
             <a href="{% url 'singleview' %}">Projects</a>
             <li><a href="{% url 'logout' %}">Logout</a></li>
 
